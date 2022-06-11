@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}submit page{% endblock title %}
+{% block content %}
+<div class="container my-5">
+    <h1 class='text-center '>{{welcome}}</h1>
+    <p class='text-center text-success h2'>نظر شما ثبت شد </p>
+   <div class="container">
+    <div class='text-center'>
+      <a href={% url 'car_index' %} class="btn btn-primary my-5">بازگشت به منو </a>
+  </div>
+</div>
+{% endblock content %}

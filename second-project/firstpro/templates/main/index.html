@@ -1,0 +1,30 @@
+<!-- @format -->
+
+{% extends 'base.html' %} {% block title %}main page{% endblock title %} 
+{% block content %}
+<div class="container my-5">
+  <h1 class="text-center">{{welcome}}</h1>
+  <h2 class="text-end">انتخاب کنید</h2>
+  <hr />
+  <div class="row justify-content-md-center">
+    {% for section in sections %}
+
+    <div class="col-md-6 w-25">
+      <div class="card" style="width: 18rem">
+        <img
+          src="{{section.image}}"
+          class="card-img-top"
+          alt="food"
+          height="200px"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-end">{{section.title}}</h5>
+          <p class="card-text text-end">{{section.description}}</p>
+          <a href="{{section.url}}" class="btn btn-primary">ورود</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

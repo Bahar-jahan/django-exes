@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+{% block title %}food main page{% endblock title %}
+{% block content %}
+<div class="container my-5">
+    <h1 class='text-center '>{{welcome}}</h1>
+    <div class="row  justify-content-center">
+        <h2 class='text-end'> انتخاب کنید </h2>
+        <hr/>
+        {% for food in food_group %}
+        <div class="col-md-4 w-25 ">
+          <div class="card px-3" style="width: 18rem;">
+            <img src={{food.image}} class="card-img-top" alt="food" height="200px" width="200px">
+            <div class="card-body">
+              <h5 class="card-title text-end">{{food.food_name}}</h5>
+              <p class="card-text text-end">
+                  {{food.description}}
+              </p>        
+              <a href={{food.url}} class="btn btn-primary">سفارش دهید</a>
+            </div>
+          </div>
+      </div>
+      {% endfor %}
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}pizza list page{% endblock title %}
+{% block content %}
+<div class="container my-5">
+    <h1 class='text-center '>{{welcome}}</h1>
+    {% comment %} card menu {% endcomment %}
+    <div class="row  justify-content-center">
+      <h2 class='text-end'>  انتخاب کنید </h2>
+      <hr/>
+      <div class="col-md-12  w-100">
+        {% for food in foods %}
+        <ul class="list-group list-group-horizontal ">
+          <li class="list-group-item w-25 ">{{food.food_name}}</li>
+          <li class="list-group-item">
+            {{food.description}}
+          </li>            
+          <li class="list-group-item">{{food.price}} تومان 
+             <a href={% url 'Order' %} class="btn btn-primary my-5">افزودن</a>
+          </li>
+        </ul>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

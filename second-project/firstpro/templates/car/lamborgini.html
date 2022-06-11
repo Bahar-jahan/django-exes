@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} lamborghini page{% endblock title %}
+{% block content %}
+<div class="container my-5">
+    <h1 class='text-center my-5'>{{welcome}}</h1>
+    <div class="card" style="">
+      <img src={{car.image}} class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{car.name}} </h5>
+        <p class="card-text">
+          {% for i in range %} {{car.description}} {% endfor %}
+        </p>
+        <a href={% url 'order' %} class="btn btn-primary">نظر بدهید</a>
+      </div>
+    </div>
+</div>
+{% endblock content %}
+

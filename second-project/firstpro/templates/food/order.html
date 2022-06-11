@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block title %} submit page{% endblock title %} 
+{% block content %}
+<div class="container my-5">
+  <h1 class="text-center">{{welcome}}</h1>
+  <p class="text-center text-success h2">سفارش شما با موفقیت ثبت شد</p>
+</div>
+<div class="container">
+  <div class="text-center">
+    <a href="http://127.0.0.1:8000/food/pizza" class="btn btn-primary my-5"
+      >بازگشت به منو
+    </a>
+  </div>
+</div>
+{% endblock content %}
