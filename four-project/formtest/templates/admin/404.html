@@ -1,0 +1,13 @@
+<!-- @format -->
+
+{% extends "base.html" %} {% load i18n %} {% block title %}{% translate 'Page
+not found' %}{% endblock %} {% block content %}
+<div class="container my-5">
+  <h2 class ='text-center'>{% translate 'Page not found' %}</h2>
+
+  <p class ='text-center'>
+    {% translate 'We’re sorry, but the requested page could not be found.' %}
+  </p>
+</div>
+
+{% endblock %}
