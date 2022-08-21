@@ -1,0 +1,19 @@
+{% extends 'main_template.html' %}
+
+{% block title %}
+ورود کاربر
+{% endblock title %}
+
+{% block content %}
+<div class="countainer my-3 ">
+    <h1 class="text-center text-primary">ثبت  نام کاربر</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit", value ="ورود " class="=btn btn-primary btn-block">
+    </form>
+</div>    
+  
+{% endblock content %}
+
+

@@ -1,0 +1,26 @@
+{% extends 'main_template.html' %}
+
+{% block title %}
+صفحه پروفایل
+{% endblock title %}
+
+{% block content %}
+<div class="countainer my-3 ">
+  <div class="card">
+    <h5 class="card-header">{{name}} {{family}} </h5>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item">ایمیل  : {{email}}</li>
+        <li class="list-group-item">نام  : {{name}}</li>
+        <li class="list-group-item">نام خانوادگی : {{family}}</li>
+        <li class="list-group-item">شماره تماس : {{mobile_number}}</li>
+        <li class="list-group-item">جنسیت  : {{gender}}</li>
+      </ul>
+    </div>
+    <a href="{% url 'accounts:edit' %}" class="btn btn-success">ویرایش</a>
+  </div>
+</div>    
+  
+{% endblock content %}
+
+
